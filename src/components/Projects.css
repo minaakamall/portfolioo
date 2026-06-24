@@ -1,0 +1,98 @@
+.projects-section { padding: 5rem 4rem 7rem; }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: none;
+}
+.project-card:hover {
+  border-color: rgba(0,204,255,0.5);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,204,255,0.08);
+}
+
+/* Featured spans full width with side-by-side layout */
+.project-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.project-card.featured .project-img { height: 100%; min-height: 280px; }
+
+.project-img {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,204,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+.project-card:hover .project-overlay { opacity: 1; }
+
+.overlay-btn {
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+  color: var(--neon2);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--neon2);
+  cursor: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 16px rgba(0,204,255,0.3);
+  transition: background 0.2s;
+}
+.overlay-btn:hover { background: rgba(0,204,255,0.15); }
+.overlay-btn-disabled {
+  padding: 0.6rem 1.5rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-transform: uppercase;
+}
+
+.project-body { padding: 1.5rem; }
+.project-num {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--neon);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.6rem;
+}
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+.project-card p {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+.project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+@media (max-width: 900px) {
+  .projects-section { padding: 5rem 2rem; }
+  .project-card.featured { grid-template-columns: 1fr; }
+  .project-card.featured .project-img { height: 200px; }
+}

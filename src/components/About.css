@@ -1,0 +1,79 @@
+.about-section { padding: 7rem 4rem; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+.about-text h2 em {
+  color: var(--neon);
+  font-style: normal;
+}
+.about-text p {
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.about-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.pill {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--neon3);
+  border: 1px solid rgba(255,0,170,0.25);
+  padding: 0.3rem 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+/* Terminal card */
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+.about-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,255,136,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.terminal-line {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 2;
+}
+.terminal-line .cmd { color: var(--neon); }
+.terminal-line .val { color: var(--neon2); }
+.terminal-line .str { color: #ff8844; }
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px; height: 14px;
+  background: var(--neon);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@media (max-width: 900px) {
+  .about-section { padding: 5rem 2rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+}

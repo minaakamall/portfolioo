@@ -1,0 +1,92 @@
+.hero-visual {
+  flex: 1;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orb-container {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  transform-style: preserve-3d;
+  animation: floatOrb 6s ease-in-out infinite;
+}
+
+.orb-core {
+  position: absolute;
+  inset: 40px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(0,255,136,0.8)  0%,
+    rgba(0,204,255,0.4) 30%,
+    rgba(0,20,40,0.9)   70%,
+    rgba(0,255,136,0.1) 100%
+  );
+  box-shadow:
+    0 0 80px  rgba(0,255,136,0.5),
+    0 0 160px rgba(0,255,136,0.2),
+    inset 0 0 60px rgba(0,204,255,0.3);
+  animation: pulseOrb 3s ease-in-out infinite;
+}
+
+/* Ring base */
+.orb-ring {
+  position: absolute;
+  border-radius: 50%;
+}
+.orb-ring::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.ring1 {
+  inset: 0;
+  border: 1px solid rgba(0,255,136,0.3);
+  animation: spinRingX 8s linear infinite;
+}
+.ring1::before {
+  width: 8px; height: 8px;
+  background: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+}
+
+.ring2 {
+  inset: -20px;
+  border: 1px solid rgba(0,204,255,0.2);
+  animation: spinRingXR 12s linear infinite;
+}
+.ring2::before {
+  width: 6px; height: 6px;
+  background: var(--neon2);
+  box-shadow: 0 0 12px var(--neon2);
+}
+
+.ring3 {
+  inset: -40px;
+  border: 1px solid rgba(255,0,170,0.15);
+  animation: spinRingY 16s linear infinite;
+}
+
+/* Dots */
+.orb-dots {
+  position: absolute;
+  inset: -60px;
+}
+.orb-dot {
+  position: absolute;
+  border-radius: 50%;
+  animation: dotFloat 2s ease-in-out infinite;
+}
+.dot-neon  { background: var(--neon);  box-shadow: 0 0 8px var(--neon);  }
+.dot-neon2 { background: var(--neon2); box-shadow: 0 0 8px var(--neon2); }
+
+@media (max-width: 900px) {
+  .hero-visual { display: none; }
+}
