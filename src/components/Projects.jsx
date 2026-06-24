@@ -8,7 +8,7 @@ const PROJECTS = [
     title: "VapeStorm",
     desc: "A fully deployed Egyptian vape store — multi-page frontend with a Supabase backend for real-time product management, cart logic, and checkout flow. Live in production on Netlify.",
     stack: ["HTML/CSS/JS", "Supabase", "Netlify", "REST API"],
-    url: "https://vapestormm.netlify.app/",
+    url: "https://vapestorm-full.vercel.app/",
     visual: "vapestorm",
   },
   {
@@ -16,7 +16,7 @@ const PROJECTS = [
     title: "OmniFood",
     desc: "OmniFood is a modern, responsive landing page for an AI-powered food subscription service that delivers personalized, healthy meals tailored to users' tastes and nutritional needs. Built with HTML, CSS, and JavaScript.",
     stack: ["HTML", "CSS3", "JavaScript"],
-    url: "https://omniifooddd.netlify.app/",
+    url: "https://omnifood-woad.vercel.app/",
     visual: "portfolio",
   },
   {
@@ -25,7 +25,7 @@ const PROJECTS = [
     title: "Pizza Menu",
     desc: "A simple and responsive Pizza Menu application built with React. This project displays a list of pizzas with their ingredients, prices, and availability status. It was created to practice React fundamentals such as components, props, JSX, conditional rendering, and dynamic data rendering.",
     stack: ["React", "CSS3", "JSX"],
-    url: "https://pizzaa-menuu1.netlify.app/",
+    url: "https://react-pizza-menu-two.vercel.app/",
     visual: "portfolio",
   },
   {
@@ -43,7 +43,7 @@ const PROJECTS = [
     title: "CafeBrew",
     desc: "A responsive landing page for a fictional coffee shop called CafeBrew. Built with HTML, CSS, and JavaScript, this project features a modern design, smooth scrolling, and interactive elements to showcase the cafe's menu and ambiance.",
     stack: ["HTML", "GitHub", "CSS3", "JavaScript"],
-    url: "https://caffeebrew.netlify.app/",
+    url: "https://cafe-seven-olive.vercel.app/",
     visual: "portfolio",
   },
 ];
